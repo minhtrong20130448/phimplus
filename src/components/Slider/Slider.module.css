@@ -1,0 +1,17 @@
+.swiper_button_next {
+  height: 100% !important;
+  width: 80px !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: 57% !important;
+}
+
+.swiper_button_prev {
+  height: 100% !important;
+  width: 80px !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  top: 57% !important;
+}

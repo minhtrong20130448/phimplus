@@ -1,0 +1,22 @@
+/* Thay đổi chiều cao của thumbnail */
+.image-gallery-thumbnails-container {
+}
+
+/* (Tuỳ chọn) Tăng/giảm khoảng cách giữa các thumbnail */
+.image-gallery-thumbnails .image-gallery-thumbnail {
+  margin-right: 10px; /* Khoảng cách giữa các ảnh */
+}
+.custom-thumbnail {
+  width: auto;
+  height: 90px;
+  border-radius: 8px;
+}
+.custom-thumbnail img {
+  border-radius: 5px;
+  width: auto !important;
+  height: 80px !important;
+  object-fit: cover;
+}
+.react-image-gallery-thumbnail {
+  height: auto;
+}
