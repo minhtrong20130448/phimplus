@@ -11,9 +11,9 @@ function* workFetch(): any {
   try {
     // Gọi API lấy dữ liệu của 3 trang phim cùng lúc
     const [page1, page2, page3] = yield all([
-      call(fetchMovieList, 1),
       call(fetchMovieList, 2),
-      call(fetchMovieList, 222),
+      call(fetchMovieList, 3),
+      call(fetchMovieList, 201),
     ]);
 
     // Gộp danh sách phim từ cả 3 trang

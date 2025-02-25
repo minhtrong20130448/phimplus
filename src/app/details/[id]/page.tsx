@@ -80,14 +80,14 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
           backgroundPosition: "center +15%",
         }}
       ></div>
-      <div className="flex lg:w-[80%] w-[95%] flex-row gap-5.5 z-10 items-start justify-between gap-5 max-w-screen-xl mx-auto mt-32">
-        <div className="flex w-1/4 flex-col gap-5.5">
-          <div className="flex flex-col gap-5.5 p-6.5">
-            <div className="w-full max-w-[320px]">
+      <div className="flex lg:w-[80%] w-[95%] sm:flex-row flex-col gap-5.5 z-10 items-start justify-between gap-5 max-w-screen-xl mx-auto sm:mt-32 mt-8">
+        <div className="flex sm:w-1/4 sm:flex-col flex-row gap-5.5">
+          <div className="flex sm:flex-col flex-row gap-5.5 p-6.5">
+            <div className="w-full sm:max-w-[320px]">
               <img src={movie.thumb_url} alt="movie image" className="w-full" />
               {episodes?.[0].server_data?.[0]?.link_embed ? (
                 <Link href={`/plays/${movie.slug}`}>
-                  <button className="block w-full h-[50px] mt-6 px-3 rounded-md text-white transition bg-blue-600 font-bold">
+                  <button className="block w-full h-[50px] mt-6 px-3 rounded-md text-white transition bg-blue-600 font-bold text-[16px]">
                     Xem Phim
                   </button>
                 </Link>
@@ -99,9 +99,11 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
             </div>
           </div>
         </div>
-        <div className="flex w-3/4 flex-col gap-5.5">
-          <div className="font-bold text-[40px]">{movie.name}</div>
-          <div className="font-light text-[25px] text-gray-400 mb-6">
+        <div className="flex sm:w-3/4 w-full flex-col gap-5.5">
+          <div className="font-bold sm:text-[40px] text-[30px]">
+            {movie.name}
+          </div>
+          <div className="font-light text-[20px] text-gray-400 mb-6">
             {movie.origin_name} ({movie.year})
           </div>
 
@@ -127,8 +129,8 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
             <span className="font-semibold">Yêu thích</span>
           </button>
 
-          <div className="flex flex-row gap-5 justify-between">
-            <div className="w-[50%]">
+          <div className="flex sm:flex-row flex-col sm:gap-5 justify-between">
+            <div className="sm:w-[50%] w-full">
               <div className="flex text-sm mb-4">
                 <div className="w-[90px] text-nowrap font-bold">Đạo diễn:</div>
                 <div className="">
@@ -141,9 +143,9 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
                     : "Đang cập nhật"}
                 </div>
               </div>
-              <div className="flex text-sm  mb-4">
+              <div className="flex text-sm mb-4 w-full">
                 <div className="w-[90px] text-nowrap font-bold">Viễn viên:</div>
-                <div className="text-nowarp truncate max-w-[200px]">
+                <div className="text-nowarp truncate sm:max-w-[200px] max-w-[250px]">
                   {movie.actor != null &&
                   movie.actor != "" &&
                   movie.actor?.length > 0
@@ -151,9 +153,9 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
                     : "Đang cập nhật"}
                 </div>
               </div>
-              <div className="flex text-sm mb-4">
+              <div className="flex text-sm mb-4 w-full">
                 <div className="w-[90px] text-nowrap font-bold">Thể loại:</div>
-                <div className="truncate max-w-[230px]">
+                <div className="truncate sm:max-w-[230px] width-full">
                   {movie.category
                     .map((cat: any, index: any) => {
                       return (
@@ -174,7 +176,7 @@ const MovieDetail = ({ params }: { params: Promise<{ id: string }> }) => {
                 </div>
               </div>
             </div>
-            <div className="w-[40%]">
+            <div className="sm:w-[40%] w-full">
               <div className="flex text-sm mb-4">
                 <div className="w-[90px] text-nowrap font-bold">Quốc gia:</div>
                 <div className="">

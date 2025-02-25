@@ -29,7 +29,7 @@ export default function MoviePlayer({ params }: { params: { id: string } }) {
         </div>
       </div>
       <div className="w-full max-w-screen-xl mx-auto p-4">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="sm:grid sm:grid-cols-3 sm:gap-4">
           <div className="col-span-2">
             <h1 className="text-2xl font-bold text-gray-900 text-white mb-4">
               {movie.name}
@@ -42,8 +42,8 @@ export default function MoviePlayer({ params }: { params: { id: string } }) {
           <div className="col-span-1">
             {/* dien vien, dao dien */}
             <div className="flex mb-4 text-sm">
-              <div className="w-1/3">Đạo diễn:</div>
-              <div className="w-2/3">
+              <div className="w-[90px]">Đạo diễn:</div>
+              <div className="w-[90%]">
                 {movie.director != null &&
                 movie.director != "" &&
                 movie.director?.length > 0
@@ -51,9 +51,9 @@ export default function MoviePlayer({ params }: { params: { id: string } }) {
                   : "Đang cập nhật"}
               </div>
             </div>
-            <div className="flex mb-4">
-              <div className="w-1/3 h-12">Diễn viên:</div>
-              <div className="w-2/3 h-12">
+            <div className="flex mb-4 text-sm">
+              <div className="w-[90px] h-12">Diễn viên:</div>
+              <div className="w-[90%] h-12">
                 {" "}
                 {movie.actor != null &&
                 movie.actor != "" &&

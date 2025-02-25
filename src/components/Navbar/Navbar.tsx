@@ -6,7 +6,7 @@ import DropdownMenu from "../DropMenu/DropMenuNavbar";
 import ClickOutside from "../ClickOutside";
 import nextConfig from "@/../next.config";
 const { basePath } = nextConfig;
-const iconLogo = `${basePath}/logofilm.png`;
+const iconLogo = `/logofilm.png`;
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
