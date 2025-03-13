@@ -4,7 +4,7 @@ const MovieTwoNameCard = ({ movie }: MovieCardProps) => {
   return (
     <div
       key={movie._id}
-      className="relative min-w-[200px] rounded-lg shadow-lg overflow-hidden flex-shrink-0"
+      className="relative min-w-[150px] rounded-lg shadow-lg overflow-hidden flex-shrink-0"
     >
       <div className="relative group">
         <img

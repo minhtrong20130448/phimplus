@@ -31,7 +31,7 @@ const EpisodeListPage = ({ episodes, title }: HorizontalEpisodeListProps) => {
           <div key={index}>
             <button
               onClick={() => handlePlay(episode)}
-              className={`block py-2 rounded-md text-white bg-blue-600 font-bold w-24 ${
+              className={`block py-2 rounded-md text-white bg-blue-600 font-bold sm:w-24 w-20 ${
                 episode_play === episode.link_embed
                   ? "bg-blue-800"
                   : "hover:bg-blue-800"
